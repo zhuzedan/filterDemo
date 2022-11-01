@@ -20,14 +20,8 @@ Component({
    */
   data: {
     // 显示控制
-    twoStage: false,
-    radio: false,
-    sort: false,
     multi: false,
     // 筛选栏数据
-    twoStageDataLeft: {},
-    radioData: {},
-    sortData: {},
     multiData: {},
     twoStageDataRight: [],
     twoStageSelectedLeft: {},
@@ -45,9 +39,6 @@ Component({
   attached() {
     if (this.properties.mode === 'position') {
       this.setData({
-        twoStageDataLeft: positionData.twoStageDataLeft,
-        radioData: positionData.radioData,
-        sortData: positionData.sortData,
         multiData: positionData.multiData
       })
     }
@@ -60,9 +51,6 @@ Component({
     // 筛选激活
     onMultiActive: function(e) {
       this.setData({
-        twoStage: false,
-        radio: false,
-        sort: false,
         multi: !this.data.multi
       })
     },
